@@ -1,0 +1,1656 @@
+/* ========================================================
+   જય માડી મસાલા (Jay Madi Masala) — સત્તાવાર પ્રીમિયમ સ્ટાઇલશીટ
+   કલર પેલેટ: Light Cream, Soft Gold, Gold Accent, Paprika Red, Warm Brown
+   ======================================================== */
+
+:root {
+  --page-bg: #FFF8E7;       /* Light cream */
+  --card-bg: #F7E6B0;       /* Soft gold */
+  --highlight-gold: #E0B24A;/* Gold borders & accents */
+  --primary-red: #C8431F;   /* Paprika orange-red */
+  --primary-red-hover: #AA3515;
+  --text-brown: #4A2A1A;    /* Warm earthy brown */
+  --text-muted: #6E4935;    /* Muted warm brown */
+  --white: #FFFFFF;
+  --gold-badge: #D89C28;
+  --border-radius: 14px;
+  --radius-sm: 8px;
+  --radius-pill: 50px;
+  --shadow-soft: 0 4px 18px rgba(74, 42, 26, 0.08);
+  --shadow-hover: 0 10px 28px rgba(74, 42, 26, 0.14);
+  --font-gujarati: 'Noto Sans Gujarati', 'Hind Vadodara', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* રીસેટ અને મૂળભૂત નિયમો */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-gujarati);
+  background-color: var(--page-bg);
+  color: var(--text-brown);
+  line-height: 1.7;
+  font-size: 17px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* સ્કીપ લિંક (Accessibility) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  background: var(--primary-red);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* કન્ટેનર */
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* બટન શૈલીઓ - લઘુત્તમ 48px ટચ ટાર્ગેટ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--primary-red);
+  color: var(--white);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: 13px 26px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  font-family: var(--font-gujarati);
+  cursor: pointer;
+  min-height: 48px;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(200, 67, 31, 0.28);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary-red-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 67, 31, 0.38);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--white);
+  color: var(--primary-red);
+  border: 2px solid var(--highlight-gold);
+  border-radius: var(--radius-pill);
+  padding: 12px 24px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  font-family: var(--font-gujarati);
+  cursor: pointer;
+  min-height: 48px;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(74, 42, 26, 0.05);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: var(--card-bg);
+  border-color: var(--primary-red);
+  transform: translateY(-2px);
+}
+
+/* ===== ૧. હેડર અને નેવિગેશન ===== */
+#navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 248, 231, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--highlight-gold);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  min-height: 68px;
+  box-shadow: 0 2px 14px rgba(224, 178, 74, 0.16);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-red), var(--highlight-gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 3px 10px rgba(200, 67, 31, 0.25);
+  flex-shrink: 0;
+}
+
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-guj {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  line-height: 1.15;
+}
+
+.brand-eng {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-brown);
+  font-weight: 600;
+  font-size: 0.96rem;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  background-color: var(--card-bg);
+  color: var(--primary-red);
+}
+
+.nav-cta-btn {
+  background-color: var(--primary-red);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 10px 20px;
+  font-family: var(--font-gujarati);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  transition: var(--transition);
+  box-shadow: 0 3px 10px rgba(200, 67, 31, 0.25);
+}
+
+.nav-cta-btn:hover {
+  background-color: var(--primary-red-hover);
+  transform: translateY(-2px);
+}
+
+/* હેમબર્ગર બટન */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background-color: var(--primary-red);
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* મોબાઈલ ડ્રોપડાઉન મેનુ */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background-color: var(--page-bg);
+  border-bottom: 2px solid var(--highlight-gold);
+  box-shadow: 0 8px 25px rgba(74, 42, 26, 0.15);
+  padding: 16px 20px 24px;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--text-brown);
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.mobile-menu a:hover {
+  background-color: var(--card-bg);
+  color: var(--primary-red);
+}
+
+.mobile-cta-btn {
+  background-color: var(--primary-red);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-family: var(--font-gujarati);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 50px;
+  margin-top: 8px;
+}
+
+/* ===== ૨. હીરો સેક્શન (Hero Redesign) ===== */
+.hero-section {
+  position: relative;
+  padding: 44px 0 64px;
+  overflow: hidden;
+}
+
+.hero-bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.glow-1 {
+  width: 380px;
+  height: 380px;
+  background-color: var(--highlight-gold);
+  top: -60px;
+  right: -60px;
+}
+
+.glow-2 {
+  width: 300px;
+  height: 300px;
+  background-color: #F8D0AA;
+  bottom: 0;
+  left: -40px;
+}
+
+.hero-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--highlight-gold);
+  color: var(--primary-red);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.hero-brand-name {
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  font-weight: 800;
+  color: var(--primary-red);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.hero-headline-sub {
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 800;
+  color: var(--text-brown);
+  line-height: 1.25;
+}
+
+.hero-tagline {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--text-brown);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.hero-delivery-notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: var(--primary-red);
+  background-color: rgba(200, 67, 31, 0.08);
+  border-left: 4px solid var(--primary-red);
+  padding: 9px 16px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 22px;
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.chip {
+  background-color: var(--white);
+  border: 1px solid var(--highlight-gold);
+  color: var(--text-brown);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(74, 42, 26, 0.05);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* હીરો વિઝ્યુઅલ કાર્ડ્સ (Professional Indian Spice Showcase) */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-card {
+  background-color: var(--white);
+  border: 2px solid var(--highlight-gold);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-red);
+}
+
+.hero-card-main {
+  background: linear-gradient(135deg, #FFF9EB, var(--card-bg));
+}
+
+.hero-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  border: 1px solid var(--highlight-gold);
+}
+
+.hero-card-img-wrap.small {
+  height: 120px;
+}
+
+.hero-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hero-card:hover .hero-card-photo {
+  transform: scale(1.05);
+}
+
+.hero-img-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: var(--primary-red);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.hero-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-red);
+  margin-bottom: 4px;
+}
+
+.card-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ===== ૩. ટ્રસ્ટ અને ગુણવત્તા વિશેષતાઓ (Section 4 - Four Feature Cards) ===== */
+.trust-section {
+  padding: 30px 0 50px;
+  background-color: rgba(247, 230, 176, 0.35);
+  border-top: 1px solid var(--highlight-gold);
+  border-bottom: 1px solid var(--highlight-gold);
+}
+
+.trust-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.trust-feature-card {
+  background-color: var(--white);
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: var(--border-radius);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.trust-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-red);
+}
+
+.trust-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--highlight-gold);
+  color: var(--primary-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  line-height: 1.35;
+}
+
+.trust-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ===== ૪. રૂબરૂ દળી આપવાની સેવા (Section Unchanged) ===== */
+#grinding {
+  padding: 70px 0;
+}
+
+.grinding-box {
+  background-color: var(--card-bg);
+  border: 2px solid var(--highlight-gold);
+  border-radius: 20px;
+  padding: 44px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.section-tag {
+  display: inline-block;
+  background-color: var(--white);
+  border: 1px solid var(--highlight-gold);
+  color: var(--primary-red);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 12px;
+}
+
+.grinding-heading {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
+.grinding-lead {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-brown);
+  margin-bottom: 22px;
+}
+
+.grinding-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.grinding-list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 1rem;
+  color: var(--text-brown);
+}
+
+.grinding-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary-red);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.grinding-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.highlight-item {
+  background-color: var(--white);
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: var(--border-radius);
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(74, 42, 26, 0.06);
+}
+
+.hl-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.hl-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-brown);
+}
+
+/* ===== ૫. ઉત્પાદનો (પ્રોડક્ટ્સ કેટલોગ - Section 3) ===== */
+#products {
+  padding: 70px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.section-desc {
+  font-size: 1.08rem;
+  color: var(--text-muted);
+}
+
+/* ફિલ્ટર બાર */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.filter-btn {
+  background-color: var(--white);
+  color: var(--text-brown);
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: var(--radius-pill);
+  padding: 10px 20px;
+  font-family: var(--font-gujarati);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 48px;
+  transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: var(--primary-red);
+  color: var(--white);
+  border-color: var(--primary-red);
+  box-shadow: 0 4px 12px rgba(200, 67, 31, 0.25);
+  transform: translateY(-2px);
+}
+
+/* પ્રોડક્ટ ગ્રીડ */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  background-color: var(--card-bg);
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-red);
+}
+
+.animate-card {
+  animation: cardFadeIn 0.35s ease forwards;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background-color: var(--white);
+  border: 1px solid var(--highlight-gold);
+}
+
+.product-real-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-real-img {
+  transform: scale(1.05);
+}
+
+/* સોનેરી જથ્થાબંધ બેજ (Gold Bulk Badge) */
+.bulk-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--highlight-gold);
+  color: var(--text-brown);
+  border: 1px solid #C8941A;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 4px 11px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  z-index: 2;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 8px;
+}
+
+.product-desc {
+  font-size: 0.95rem;
+  color: var(--text-brown);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+/* જાતો (Varieties) - PRD સ્પષ્ટીકરણ */
+.product-section-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-red);
+  margin-bottom: 6px;
+}
+
+.variety-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.variety-chip {
+  background-color: var(--white);
+  border: 1px solid var(--highlight-gold);
+  color: var(--text-brown);
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* પેકિંગ સાઇઝ (Pack sizes) */
+.pack-size-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.pack-chip {
+  background-color: rgba(200, 67, 31, 0.1);
+  color: var(--primary-red);
+  border: 1px solid rgba(200, 67, 31, 0.2);
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.price-notice {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  border-top: 1px dashed var(--highlight-gold);
+  padding-top: 12px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* કેટલોગ સિંગલ CTA પટ્ટી */
+.catalog-cta-strip {
+  background-color: var(--card-bg);
+  border: 2px solid var(--highlight-gold);
+  border-radius: var(--border-radius);
+  padding: 26px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-soft);
+}
+
+.catalog-cta-text h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 4px;
+}
+
+.catalog-cta-text p {
+  color: var(--text-brown);
+  font-size: 0.98rem;
+}
+
+/* ===== ૬. જથ્થાબંધ વેપાર સેક્શન (Section 5) ===== */
+#bulk {
+  padding: 70px 0;
+  background-color: rgba(247, 230, 176, 0.35);
+  border-top: 1px solid var(--highlight-gold);
+  border-bottom: 1px solid var(--highlight-gold);
+}
+
+.bulk-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.bulk-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
+.bulk-desc {
+  font-size: 1.08rem;
+  color: var(--text-brown);
+  margin-bottom: 26px;
+  line-height: 1.7;
+}
+
+.bulk-grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.b-card {
+  background-color: var(--white);
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.b-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.b-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-red);
+  margin-bottom: 6px;
+}
+
+.b-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.bulk-contact-box {
+  background-color: var(--card-bg);
+  border: 2px solid var(--highlight-gold);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+}
+
+.bulk-contact-box h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 8px;
+}
+
+.bulk-contact-box p {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.owner-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.owner-contact-row {
+  background-color: var(--white);
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.owner-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.owner-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-brown);
+}
+
+.owner-tel {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.owner-tel:hover {
+  color: var(--primary-red);
+}
+
+.owner-wa-link {
+  background-color: #25D366;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 40px;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+.owner-wa-link:hover {
+  background-color: #1EBE5D;
+  transform: scale(1.04);
+}
+
+/* ===== ૭. સંપર્ક અને સ્થાન (Section 6) ===== */
+#contact {
+  padding: 70px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.c-card {
+  background-color: var(--card-bg);
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: var(--border-radius);
+  padding: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.c-card h3 {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 10px;
+}
+
+.address-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.map-embed-box {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--highlight-gold);
+  margin-bottom: 14px;
+}
+
+.map-btn {
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.phone-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phone-links a {
+  color: var(--text-brown);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.02rem;
+  display: inline-block;
+  padding: 4px 0;
+}
+
+.phone-links a:hover {
+  color: var(--primary-red);
+}
+
+/* સંપર્ક ફોર્મ */
+.contact-form-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--highlight-gold);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-form-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 4px;
+}
+
+.form-subtext {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-brown);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--highlight-gold);
+  background-color: var(--white);
+  color: var(--text-brown);
+  font-family: var(--font-gujarati);
+  font-size: 1rem;
+  min-height: 48px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 3px rgba(200, 67, 31, 0.15);
+}
+
+.input-error {
+  border-color: #D32F2F !important;
+  background-color: #FFF5F5 !important;
+}
+
+.field-error {
+  display: block;
+  color: #D32F2F;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+.form-submit-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ===== ૮. ફૂટર (PRD: લાઇટ કલર, નો ડાર્ક બેન્ડ) ===== */
+#footer {
+  background-color: var(--card-bg);
+  border-top: 2px solid var(--highlight-gold);
+  padding: 40px 0 24px;
+  color: var(--text-brown);
+}
+
+.footer-devotional {
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--primary-red);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--highlight-gold);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.3fr;
+  gap: 36px;
+  margin-bottom: 30px;
+}
+
+.footer-brand-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 8px;
+}
+
+.footer-tagline-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.footer-delivery-badge {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--primary-red);
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-brown);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-red);
+}
+
+.footer-phone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.footer-phone-list a {
+  color: var(--text-brown);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-phone-list a:hover {
+  color: var(--primary-red);
+}
+
+.footer-timing {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--highlight-gold);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* ===== ૯. ફ્લોટિંગ WHATSAPP બટન ===== */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 990;
+  background-color: #25D366;
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 12px 22px;
+  font-family: var(--font-gujarati);
+  font-weight: 700;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  min-height: 52px;
+  transition: var(--transition);
+}
+
+.floating-wa-btn:hover {
+  background-color: #1EBE5D;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.55);
+}
+
+.wa-icon {
+  font-size: 1.3rem;
+}
+
+/* પલ્સ એનિમેશન */
+@keyframes waPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.floating-wa-btn {
+  animation: waPulse 3s infinite;
+}
+
+/* ===== ૧૦. WHATSAPP ૩-ઓનર મોડલ (Section 7) ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: rgba(74, 42, 26, 0.65);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background-color: var(--page-bg);
+  border: 2px solid var(--highlight-gold);
+  border-radius: 18px;
+  max-width: 440px;
+  width: 100%;
+  padding: 28px;
+  box-shadow: 0 12px 40px rgba(74, 42, 26, 0.25);
+  transform: scale(0.92);
+  transition: transform 0.25s ease;
+}
+
+.modal-overlay.active .modal-card {
+  transform: scale(1);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 6px;
+}
+
+.modal-header p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.modal-owners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.modal-owner-card {
+  background-color: var(--white);
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: var(--transition);
+  min-height: 54px;
+}
+
+.modal-owner-card:hover {
+  border-color: #25D366;
+  background-color: rgba(37, 211, 102, 0.06);
+  transform: translateX(4px);
+}
+
+.modal-owner-title {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--text-brown);
+}
+
+.modal-owner-num {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.modal-owner-badge {
+  background-color: #25D366;
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.modal-close-btn {
+  width: 100%;
+  background: none;
+  border: 1.5px solid var(--highlight-gold);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: var(--font-gujarati);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-brown);
+  cursor: pointer;
+  min-height: 48px;
+  transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+  border-color: var(--primary-red);
+  color: var(--primary-red);
+  background-color: var(--card-bg);
+}
+
+/* ========================================================
+   મોબાઈલ અને ટેબ્લેટ રિસ્પોન્સિવ મીડિયા ક્વેરીઝ
+   ======================================================== */
+@media (max-width: 1024px) {
+  .trust-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .grinding-box {
+    grid-template-columns: 1fr;
+    padding: 32px;
+    gap: 30px;
+  }
+
+  .bulk-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-section {
+    padding: 24px 0 40px;
+  }
+
+  .hero-brand-name {
+    font-size: 2.4rem;
+  }
+
+  .hero-headline-sub {
+    font-size: 1.45rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.02rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+  }
+
+  .hero-card-img-wrap {
+    height: 160px;
+  }
+
+  .hero-card-img-wrap.small {
+    height: 100px;
+  }
+
+  .trust-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .grinding-box {
+    padding: 24px 18px;
+  }
+
+  .grinding-highlights {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .highlight-item {
+    padding: 16px 10px;
+  }
+
+  .hl-number {
+    font-size: 1.6rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .bulk-grid-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-cta-strip {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .catalog-cta-strip .btn-primary {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .floating-wa-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-cards-row {
+    grid-template-columns: 1fr;
+  }
+
+  .grinding-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-wa-btn .wa-label {
+    display: none;
+  }
+
+  .floating-wa-btn {
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+/* Reduced Motion (Accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .floating-wa-btn {
+    animation: none;
+  }
+}
